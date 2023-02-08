@@ -1,0 +1,128 @@
+#define  _CRT_SECURE_NO_WARNINGS 1
+
+#include <stdio.h>
+
+//作用域和生命周期
+// 作用域
+//局部变量的作用域：就是变量所在的局部范围
+//全局变量的作用域：整个工程
+
+//int g_val = 2023;//全局变量
+
+//int main()
+//{
+//	printf("1:%d\n", g_val);
+//	printf("hello word\n");
+//	{
+//		int a = 10;
+//		printf("a=%d\n", a);
+//		printf("2:%d\n", g_val);
+//	}
+//	printf("3:%d\n", g_val);
+//	return 0;
+//}
+
+//生命周期
+//变量的生命周期：变量的创建和销毁之间的时间段
+//
+//局部变量的生命周期：进入局部范围生命开始，出局部范围生命结束
+//全局变量的生命周期：程序的生命周期
+
+//int main()
+//{
+//	{
+//		int a = 10;
+//		printf("a=%d\n", a);
+//	}
+//	return 0;
+//}
+
+//常量
+
+
+//int main()
+//{
+//1.字面常量
+//	3.14;
+//	10;
+//	'a';
+//	"abcd";
+//
+//	//2.const修饰的常变量
+//	int num = 10;//变量
+//	num = 20;
+//	printf("%d\n", num);//20
+//
+//	return 0;
+//}
+
+
+//#define MAX 100000
+//
+//int main()
+//{
+//	//const int num = 10;//num就是常变量-具有常属性（不能改变的属性）
+//	//num = 20;//上一步使用comst会导致这一步num报错
+//	//printf("%d\n", num);
+//
+//	//int arr[10] = { 0 };//10个元素
+//	//int n = 10;
+//	//int arr2[n] = { 0 };//n是变量的，但这是错误的，会报错
+//
+//	//3.#define 定义的标识符常量
+//	/*int n = MAX;
+//	printf("n=%d\n", n);*/
+//
+//	
+//	return 0;
+//}
+
+//性别
+//enum Sex
+//{
+//	//这种枚举类型的变量的未来可能取值
+//	MALE,//男性
+//	FEMALE,//女性
+//	SECRET//保密
+//} ;
+//
+//int main()
+//{
+//	//枚举常量
+//	//可以一一列举的常量
+//
+//	enum Sex s = MALE; 
+//
+//	printf("%d\n", MALE);
+//	printf("%d\n", FEMALE);
+//	printf("%d\n", SECRET);
+//
+//	return 0;
+//}
+
+//字符转就是一串字符 - 用双引号括起来的一串字符
+
+#include <string.h>
+
+int main()
+{
+	//字符数组-数组是一组相同类型的元素
+	//字符串在结尾的位置隐藏了一个\0的字符
+	//\0是字符串的结束标志
+	
+	//char arr[] = "hello";
+	char arr1[] = "abc";//双引号引起来的是一串字符
+	char arr2[] = {'a','b','c'};//单引号引起的是一个字符
+	
+	//求一下字符串的长度
+	printf("%d\n", strlen(arr1));//结果为3
+	printf("%d\n", strlen(arr2));//结果为随机值---如希望结果为3需要把char arr2[] = {'a','b','c'};修改为char arr2[] = {'a','b','c'，'\0'};
+	//int len = strlen("abc");//strlen=string length(是求字符长度）
+	//printf("%d\n", len);
+
+	//打印字符串
+	//printf("%s\n", arr1);//%s是打印字符串
+	//printf("%S\n", arr2);
+
+	return 0;
+  }
